@@ -1,3 +1,22 @@
+:root {
+    --blue-light: #4ABAF9;
+    --green-light: #BCF6B3;
+
+    --dark-light: #5A5A5A; 
+    --dark: #292929; 
+
+    --blue: #3864FF;
+    --blue-clar: #96C7D7; 
+
+    --purple: #9B98EF; 
+    --ciruela: #FBC7D4; 
+    
+    --orange: #F4A261; 
+    --orange-light: #FFEA7A;
+
+    --white: #ffffff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -9,12 +28,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: 'Prompt', sans-serif;
 }
 
 /*SECCION ENVIO*/
 
 .seccionEnvio{
-    border: 1px solid rgb(204, 204, 204);
     width: 500px;
     margin: 20px auto;
     display: grid;
@@ -54,6 +73,21 @@ input[type="text"]:focus {
     border: 1px solid rgb(204, 204, 204); 
     padding: 5px 10px;
     border-radius: 15px;
+    color: var(--white);
+    text-align: center;
+    
+}
+
+.seccionEnvio form .opcion1{
+    background: linear-gradient(to right, var(--blue), var(--blue-light));
+}
+
+.seccionEnvio form .opcion2{
+    background: linear-gradient(to right, var(--purple), var(--ciruela));
+}
+
+.seccionEnvio form .opcion3{
+    background: linear-gradient(to right, var(--orange), var(--orange-light));
 }
 
 .seccionEnvio .contenedorBoton{
@@ -66,12 +100,15 @@ input[type="text"]:focus {
 .seccionEnvio button{
     width: 80%;
     height: 80%;
+    background: var(--dark);
+    color: var(--white);
+    border-radius: 15px;
 }
 
 
 /*SECCION PROYECTOS*/
 .seccionProyectos{
-    background: coral;
+    
     width: 100%;
     height: 360px;
     display: flex;
@@ -86,25 +123,32 @@ input[type="text"]:focus {
     background: lightgray;
 }
 
+
 /*SECCION HEADER*/
 .seccionHeader{
     width: 100%;
     height: 40px;
-    background-color: lightblue;
+    background: linear-gradient(to right, var(--blue-light), var(--green-light));
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--white);
 }
 
 /*SECCION PRESENTACION*/
 .seccionPresentacion{
     width: 100%;
     height: 100px;
-    background-color: coral;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--dark-light)
+}
+
+.seccionPresentacion h2{
+    font-size: 20px;
 }
 
 
