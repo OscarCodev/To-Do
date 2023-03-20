@@ -219,7 +219,11 @@ input[type="text"]:focus {
 }
 
 
-
+/*Para modificar con JS*/
+.line-through { /*Jugaremos con esta clase utilizando javascript*/
+    text-decoration: line-through;
+    color: var(--dark);
+}
 
 
 
