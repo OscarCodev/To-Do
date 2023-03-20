@@ -24,29 +24,29 @@
     </div>
 
     <div class="seccionEnvio">
-        <div class="contenedorInput"><input type="text" placeholder="  Agrega una tarea"></div>
+        <div class="contenedorInput"><input type="text" placeholder="  Agrega una tarea" id="input"></div>
         <form>
           <label class="opcion1">
-            <input type="radio" name="color" value="red">
+            <input type="radio" name="project" value="opcion1">
             Proyecto 1
           </label>
           <label class="opcion2">
-            <input type="radio" name="color" value="blue">
+            <input type="radio" name="project" value="opcion2">
             Proyecto 2
           </label>
           <label class="opcion3">
-            <input type="radio" name="color" value="green">
+            <input type="radio" name="project" value="opcion3">
             Proyecto 3
           </label>
         </form>
-        <div class="contenedorBoton"><button>Agregar</button></div>
+        <div class="contenedorBoton"><button id="boton-agregar">Agregar</button></div>
     </div>
 
     <div class="seccionProyectos">
 
       <div class="proyecto1">
         <header>Proyecto 1</header>
-        <ul>
+        <ul id="lista1">
 
           <li id="elemento">
             <i class="far fa-circle" data="realizado"></i>
@@ -59,14 +59,14 @@
 
       <div class="proyecto2">
         <header>Proyecto 2</header>
-        <ul>
+        <ul id="lista2">
           
         </ul>
       </div>
 
       <div class="proyecto3">
         <header>Proyecto 3</header>
-        <ul>
+        <ul id="lista3">
           <li id="elemento">
             <i class="far fa-circle" data="realizado"></i>
             <p class="text">Tarea 1</p>
@@ -75,6 +75,8 @@
         </ul>
       </div>
     </div>
+
+    <script src="main.js"></script>
     
 </body>
 </html>
