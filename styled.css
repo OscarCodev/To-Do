@@ -64,23 +64,21 @@ body{
 .seccionEnvio{
     width: 500px;
     margin: 20px auto;
-    display: grid;
-    grid-template:
-        "input input input input" 50px
-        "form  form  form  button" 50px/
-        1fr    1fr   1fr   1fr;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.seccionEnvio .contenedorInput{
-    grid-area: input;
+.seccionEnvio .contenedorInput{ /*caja*/
+    flex-basis: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 15px 20px;
 }
 
 .seccionEnvio input[type="text"]{
-    width: 95%;
-    height: 30px;
+    width: 100%;
+    height: 35px;
     border-radius: 15px;
     border: 1px solid rgb(204, 204, 204);
     text-indent: 10px;
@@ -90,20 +88,21 @@ input[type="text"]:focus {
     outline: 2px solid rgb(238, 238, 238);
 }
 
-.seccionEnvio form{
-    grid-area: form;
+.seccionEnvio form{ /*caja*/
+    flex-basis: 80%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin: 15px 0;
 }
 
 .seccionEnvio form label{
     border: 1px solid rgb(204, 204, 204); 
-    padding: 5px 10px;
+    width: auto;
+    padding: 3px 10px;
     border-radius: 15px;
     color: var(--white);
     text-align: center;
-    
 }
 
 .seccionEnvio form .opcion1{
@@ -118,16 +117,16 @@ input[type="text"]:focus {
     background: linear-gradient(to right, var(--orange), var(--orange-light));
 }
 
-.seccionEnvio .contenedorBoton{
-    grid-area: button;
+.seccionEnvio .contenedorBoton{ /*caja*/
+    flex-basis: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.seccionEnvio button{
-    width: 80%;
-    height: 80%;
+.seccionEnvio button{ 
+    width: 90%;
+    height: 70%;
     background: var(--dark);
     color: var(--white);
     border-radius: 15px;
@@ -245,6 +244,19 @@ input[type="text"]:focus {
     .proyecto1, .proyecto2, .proyecto3{
         width: 90%;
     }
+
+    .seccionEnvio form{
+        flex-basis: 100%;
+    }
+
+    .seccionEnvio .contenedorBoton{ /*caja*/
+        flex-basis: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
 /*Personalizando el Scrool*/
