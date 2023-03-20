@@ -31,8 +31,36 @@ body{
     font-family: 'Prompt', sans-serif;
 }
 
-/*SECCION ENVIO*/
 
+/*SECCION HEADER*/
+.seccionHeader{
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, var(--blue-light), var(--green-light));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+/*SECCION PRESENTACION*/
+.seccionPresentacion{
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-light)
+}
+
+.seccionPresentacion h2{
+    font-size: 20px;
+}
+
+
+/*SECCION ENVIO*/
 .seccionEnvio{
     width: 500px;
     margin: 20px auto;
@@ -123,33 +151,79 @@ input[type="text"]:focus {
     background: lightgray;
 }
 
-
-/*SECCION HEADER*/
-.seccionHeader{
+.seccionProyectos div header{
     width: 100%;
-    height: 40px;
-    background: linear-gradient(to right, var(--blue-light), var(--green-light));
+    height: 25px;
+    text-align: center;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+}
+
+.proyecto1 header{
+    background: var(--blue);
+}
+
+.proyecto2 header{
+    background: var(--purple);
+}
+
+.proyecto3 header{
+    background: var(--orange);
+}
+
+.seccionProyectos ul{
+    width: 100%;
+    height: 275px;
+    list-style: none;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 10px 0;
+    overflow-y: auto;
+}
+.proyecto1 ul{
+    background: linear-gradient(to right, var(--blue), var(--blue-light));
+
+}
+
+.proyecto2 ul{
+    background: linear-gradient(to right, var(--purple), var(--ciruela));
+}
+
+.proyecto3 ul{
+    background: linear-gradient(to right, var(--orange), var(--orange-light));
+}
+
+.seccionProyectos ul li{
+    width: 95%;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    margin-bottom: 5px;
     color: var(--white);
 }
 
-/*SECCION PRESENTACION*/
-.seccionPresentacion{
-    width: 100%;
-    height: 100px;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--dark-light)
+.seccionProyectos ul li:hover{
+    background-color: rgba(255,255,255,0.4);
 }
 
-.seccionPresentacion h2{
-    font-size: 20px;
+.seccionProyectos ul li p{
+    margin: 4px 5px;
+    line-height: 17px;
 }
+
+.seccionProyectos ul li .btn-d:hover{
+    color: rgb(255, 107, 107);
+}
+
+
+
+
+
+
 
 
 /*RESPONSIVE DESIGN XD*/
@@ -172,3 +246,23 @@ input[type="text"]:focus {
         width: 90%;
     }
 }
+
+/*Personalizando el Scrool*/
+::-webkit-scrollbar {
+    width: 5px;
+    
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #b7b7b7;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+  }
