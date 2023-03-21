@@ -20,6 +20,10 @@ const lineThrough = 'line-through' //clase que ya esta definida en CSS
 const FECHA = new Date()
 fecha.innerHTML = FECHA.toLocaleDateString('es-PE',{weekday:'long', month: 'short', day: 'numeric'})
 
+//Declaraciones para almacenamiento
+let id, LIST; 
+
+
 function obtenerOpcion(op){
     let opcionSeleccionada
     op.forEach(opcion =>{
@@ -78,21 +82,24 @@ botonAgregar.addEventListener('click', ()=>{
     const tarea = input.value
     const opcionSelect = obtenerOpcion(opciones)//Detectar que input radio esta seleccionado - retorna un string
     if(tarea){
-        agregarTarea(tarea, opcionSelect, 1, false, false)
+        agregarTarea(tarea, opcionSelect, id, false, false)
+        input.value = ""
     }
-    input.value = ""
+
+    id++
 })
 
-document.addEventListener('keydown', (event)=>{
+document.addEventListener('keyup', (event)=>{
     if(event.key == 'Enter'){
         const tarea = input.value
         const opcionSelect = obtenerOpcion(opciones)
-        if(opcionSelect){
-            if(tarea){
-                agregarTarea(tarea, opcionSelect, 1, false, false)
-               }
-               input.value = ""
-        } 
+        
+        if(tarea){
+            agregarTarea(tarea, opcionSelect, id, false, false)
+            input.value = ""
+        }
+        id++
+        
     }
 })
 
@@ -102,7 +109,6 @@ lista1.addEventListener('click', function(event){
     //Las dos primeras lineas basicamente leen el atributo data del elemento seleccionado dentro del ul lista
     const element = event.target //La propiedad "target" del objeto "event" se refiere al elemento en el que se hizo clic
     const elementData = element.attributes.data.value
-
     if(elementData === 'realizado'){
         tareaRealizada(element)
     }else if (elementData === 'eliminado'){
