@@ -82,6 +82,7 @@ body{
     border-radius: 15px;
     border: 1px solid rgb(204, 204, 204);
     text-indent: 10px;
+    font-family: 'Prompt', sans-serif;
 }
 
 input[type="text"]:focus {
@@ -97,7 +98,6 @@ input[type="text"]:focus {
 }
 
 .seccionEnvio form label{
-    border: 1px solid rgb(204, 204, 204); 
     width: auto;
     padding: 3px 10px;
     border-radius: 15px;
@@ -147,7 +147,6 @@ input[type="text"]:focus {
 .proyecto1, .proyecto2, .proyecto3{
     width: 400px;
     height: 300px;
-    background: lightgray;
 }
 
 .seccionProyectos div header{
@@ -156,6 +155,7 @@ input[type="text"]:focus {
     text-align: center;
     color: var(--white);
     border-bottom: 1px solid var(--white);
+    border-radius: 10px;
 }
 
 .proyecto1 header{
@@ -179,6 +179,7 @@ input[type="text"]:focus {
     align-items: center;
     padding: 10px 0;
     overflow-y: auto;
+    border-radius: 10px;
 }
 .proyecto1 ul{
     background: linear-gradient(to right, var(--blue), var(--blue-light));
